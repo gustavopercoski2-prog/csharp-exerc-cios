@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Section01_EstruturaBasicaCSharp", "Section01_EstruturaBasicaCSharp", "{8E4CBF3D-C622-4CF4-ADE0-02E1B9B679B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeiroProjeto", "Section01_EstruturaBasicaCSharp\PrimeiroProjeto\PrimeiroProjeto.csproj", "{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Debug|x64.Build.0 = Debug|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Debug|x86.Build.0 = Debug|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Release|x64.ActiveCfg = Release|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Release|x64.Build.0 = Release|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Release|x86.ActiveCfg = Release|Any CPU
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5EABA59-CF66-4845-A3F0-65BD0E36DB86} = {8E4CBF3D-C622-4CF4-ADE0-02E1B9B679B1}
+	EndGlobalSection
+EndGlobal
