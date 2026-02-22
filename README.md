@@ -13,3 +13,17 @@ Caso ainda não tenha instalado, execute no terminal:
 ```bash
 sudo apt-get update
 sudo apt-get install -y dotnet-sdk-8.0
+```
+## Primeiro programa
+
+O clássico "Hello World" usando formato de código básico antigo com o intuito de mostrar mais explicitamente o que estamos fazendo.
+
+Conceitos aprendidos:
+
+- using
+- namespace
+- class
+- método Main
+- Console.WriteLine
+
+---
