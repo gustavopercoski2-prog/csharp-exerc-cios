@@ -1,9 +1,15 @@
-﻿namespace Exercicio01_NumeroNegativo;
+﻿namespace NegativeNumber {
+    class Program {
+        static void Main(string[] args) {
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
+            int x = int.Parse(Console.ReadLine()!);
+
+            if (x < 0) {
+                Console.WriteLine("NEGATIVO");
+            }
+            else {
+                Console.WriteLine("NAO NEGATIVO");
+            }
+        }
     }
 }
