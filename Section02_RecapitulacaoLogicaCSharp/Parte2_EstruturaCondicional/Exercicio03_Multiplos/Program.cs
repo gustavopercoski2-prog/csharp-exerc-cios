@@ -1,9 +1,17 @@
-﻿namespace Exercicio03_Multiplos;
+﻿namespace MultipleNumbers {
+    class Program {
+        static void Main(string[] args) {
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
+            string[] valores = Console.ReadLine()!.Split(' ');
+            int x = int.Parse(valores[0]);
+            int y = int.Parse(valores[1]);
+
+            if (x % y == 0 || y % x == 0) {
+                Console.WriteLine("Sao Multiplos");
+            }
+            else {
+                Console.WriteLine("Nao sao Multiplos");
+            }
+        }
     }
 }
