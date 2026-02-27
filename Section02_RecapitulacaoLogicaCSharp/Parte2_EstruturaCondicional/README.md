@@ -2,7 +2,7 @@
 
 Diretório reservado para a resolução de 8 exercícios de lógica usando `if`, `else if` e `else`, do curso **[C# COMPLETO Programação Orientada a Objetos + Projetos](https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/)**, ministrado pelo professor **Nelio Alves** na plataforma **Udemy**.
 
-**Progresso:** 🚧 6/8 concluído.
+**Progresso:** 🚧 7/8 concluído.
 
 ---
 
@@ -311,5 +311,70 @@ namespace Intervals {
 * **Tradução Lógico-Matemática:** Compreensão prática da diferença entre intervalos fechados `[ ]` (inclusivos, usando `<=`) e intervalos abertos `( )` (exclusivos, usando `<`).
 * **Eficiência do Encadeamento:** Uso inteligente da estrutura `else if` para simplificar a lógica. Ao verificar os limites gradativamente, o programa descarta a necessidade de usar o operador `&&` repetidas vezes.
 * **Operador Lógico OU (`||`):** Aplicação do operador `||` para validar rapidamente se o número de entrada está completamente fora do escopo aceitável (menor que zero ou maior que cem) logo na primeira verificação.
+
+---
+
+## ✅ Exercício 07: Quadrantes
+
+### Enunciado:
+
+![Enunciado do Exercício](./assets/Exercicio07_Quadrantes.png)
+
+---
+
+<details>
+<summary>Ver código</summary>
+
+```csharp
+using System.Globalization;
+
+namespace Quadrants {
+    class Program {
+        static void Main(string[] args) {
+
+            string[] valores = Console.ReadLine()!.Split(' ');
+            double x = double.Parse(valores[0], CultureInfo.InvariantCulture);
+            double y = double.Parse(valores[1], CultureInfo.InvariantCulture);
+
+            if (x == 0.0 && y == 0.0) {
+                Console.WriteLine("Origem");
+            }
+            else if (x == 0.0) {
+                Console.WriteLine("Eixo Y");
+            }
+            else if (y == 0.0) {
+                Console.WriteLine("Eixo X");
+            }
+            else if (x > 0.0 && y > 0.0) {
+                Console.WriteLine("Q1");
+            }
+            else if (x < 0.0 && y > 0.0) {
+                Console.WriteLine("Q2");
+            }
+            else if (x < 0.0 && y < 0.0) {
+                Console.WriteLine("Q3");
+            }
+            else {
+                Console.WriteLine("Q4");
+            }
+        }
+    }
+}
+
+```
+
+### Saída no terminal:
+
+![Resultado no Terminal](./assets/Terminal_Exercicio07_Quadrantes.png)
+
+</details>
+
+---
+
+### 🧠 Aprendizado:
+
+* **Plano Cartesiano em Código:** Aplicação de conceitos matemáticos bidimensionais (eixos X e Y) em lógicas de programação.
+* **Operador Lógico E (`&&`):** Utilização da porta lógica "E" (`&&`) para garantir que duas condições independentes sejam verdadeiras ao mesmo tempo (exemplo: para ser o Quadrante 1, X **precisa** ser maior que zero **e** Y **precisa** ser maior que zero).
+* **Prioridade de Validação:** Entendimento prático de que a ordem das validações importa. Garantir a checagem do ponto de origem (`0.0, 0.0`) e dos eixos antes de verificar os quadrantes evita bugs de lógica no encadeamento do `else if`.
 
 ---
