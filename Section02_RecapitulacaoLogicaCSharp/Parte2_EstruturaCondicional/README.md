@@ -2,7 +2,7 @@
 
 Diretório reservado para a resolução de 8 exercícios de lógica usando `if`, `else if` e `else`, do curso **[C# COMPLETO Programação Orientada a Objetos + Projetos](https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/)**, ministrado pelo professor **Nelio Alves** na plataforma **Udemy**.
 
-**Progresso:** 🚧 4/8 concluído.
+**Progresso:** 🚧 5/8 concluído.
 
 ---
 
@@ -145,7 +145,7 @@ namespace MultipleNumbers {
 
 ---
 
-## ✅ Exercício 04: Tempo de Jogo
+## ✅ Exercício 04: Duração de Jogo
 
 ### Enunciado:
 
@@ -193,5 +193,66 @@ namespace GameDuration {
 * Prática de **cálculo com ciclo de 24 horas**, considerando a virada da meia-noite.
 * Reforço na **leitura de dois valores na mesma linha** com `.Split(' ')` e conversão para `int`.
 * Desenvolvimento do **raciocínio lógico** para calcular a duração corretamente em todos os casos.
+
+---
+
+## ✅ Exercício 05: Lanchonete
+
+### Enunciado:
+
+![Enunciado do Exercício](./assets/Exercicio05_Lanchonete.png)
+
+---
+
+<details>
+<summary>Ver código</summary>
+
+```csharp
+using System.Globalization;
+
+namespace SnackBar {
+    class Program {
+        static void Main(string[] args) {
+
+            string[] valores = Console.ReadLine()!.Split(' ');
+            int codigo = int.Parse(valores[0]);
+            int quantidade = int.Parse(valores[1]);
+
+            double total;
+            if (codigo == 1) {
+                total = quantidade * 4.0;
+            }
+            else if (codigo == 2) {
+                total = quantidade * 4.5;
+            }
+            else if (codigo == 3) {
+                total = quantidade * 5.0;
+            }
+            else if (codigo == 4) {
+                total = quantidade * 2.0;
+            }
+            else {
+                total = quantidade * 1.5;
+            }
+
+            Console.WriteLine("Total: R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
+```
+
+### Saída no terminal:
+
+![Resultado no Terminal](./assets/Terminal_Exercicio05_Lanchonete.png)
+
+</details>
+
+---
+
+### 🧠 Aprendizado:
+
+* Uso de **`if / else if / else`** para tratar várias opções de código de forma organizada.
+* Prática na **formatação de valores monetários**, garantindo duas casas decimais com `.ToString("F2")` e usando `CultureInfo.InvariantCulture` para manter o ponto como separador.
+* Manipulação de **tipos diferentes (`int` e `double`)**, entendendo como a multiplicação entre quantidade e preço gera um valor final do tipo `double`.
 
 ---
