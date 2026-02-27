@@ -2,7 +2,7 @@
 
 Diretório reservado para a resolução de 8 exercícios de lógica usando `if`, `else if` e `else`, do curso **[C# COMPLETO Programação Orientada a Objetos + Projetos](https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/)**, ministrado pelo professor **Nelio Alves** na plataforma **Udemy**.
 
-**Progresso:** 🚧 7/8 concluído.
+**Progresso:** 🚧 8/8 concluído.
 
 ---
 
@@ -376,5 +376,67 @@ namespace Quadrants {
 * **Plano Cartesiano em Código:** Aplicação de conceitos matemáticos bidimensionais (eixos X e Y) em lógicas de programação.
 * **Operador Lógico E (`&&`):** Utilização da porta lógica "E" (`&&`) para garantir que duas condições independentes sejam verdadeiras ao mesmo tempo (exemplo: para ser o Quadrante 1, X **precisa** ser maior que zero **e** Y **precisa** ser maior que zero).
 * **Prioridade de Validação:** Entendimento prático de que a ordem das validações importa. Garantir a checagem do ponto de origem (`0.0, 0.0`) e dos eixos antes de verificar os quadrantes evita bugs de lógica no encadeamento do `else if`.
+
+---
+
+## ✅ Exercício 08: Imposto de Renda
+
+### Enunciado:
+
+![Enunciado do Exercício](./assets/Exercicio08_ImpostoDeRenda.png)
+
+---
+
+<details>
+<summary>Ver código</summary>
+
+```csharp
+using System.Globalization;
+
+namespace IncomeTax {
+    class Program {
+        static void Main(string[] args) {
+
+            double salario = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
+
+            double imposto;
+            if (salario <= 2000.0) {
+                imposto = 0.0;
+            }
+            else if (salario <= 3000.0) {
+                imposto = (salario - 2000.0) * 0.08;
+            }
+            else if (salario <= 4500.0) {
+                imposto = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
+            }
+            else {
+                imposto = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
+            }
+
+            if (imposto == 0.0) {
+                Console.WriteLine("Isento");
+            }
+            else {
+                Console.WriteLine("R$ " + imposto.ToString("F2", CultureInfo.InvariantCulture));
+            }
+        }
+    }
+}
+
+```
+
+### Saída no terminal:
+
+![Resultado no Terminal](./assets/Terminal_Exercicio08_ImpostoDeRenda.png)
+
+</details>
+
+---
+
+### 🧠 Aprendizado:
+
+* **Lógica de Cálculo Progressivo:** Desenvolvimento de raciocínio matemático para aplicar taxas diferentes sobre frações específicas de um valor total. Entendimento prático de como isolar o "excedente" de cada faixa salarial e somá-lo ao imposto máximo acumulado das faixas anteriores.
+* **Regras de Negócio Complexas:** Utilização avançada do encadeamento de `if / else if` para resolver um problema real do cotidiano (tabela de IR), garantindo que o fluxo não calcule valores isentos de forma equivocada.
+* **Apresentação Condicional:** Uso de um `if` independente no final do código especificamente para tratar a saída na tela (exibindo "Isento" quando o valor é zero, ou formatando a moeda corretamente nos demais casos), separando a lógica de cálculo da lógica de visualização.
 
 ---
