@@ -2,7 +2,7 @@
 
 Diretório reservado para a resolução de 8 exercícios de lógica usando `if`, `else if` e `else`, do curso **[C# COMPLETO Programação Orientada a Objetos + Projetos](https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/)**, ministrado pelo professor **Nelio Alves** na plataforma **Udemy**.
 
-**Progresso:** 🚧 5/8 concluído.
+**Progresso:** 🚧 6/8 concluído.
 
 ---
 
@@ -254,5 +254,62 @@ namespace SnackBar {
 * Uso de **`if / else if / else`** para tratar várias opções de código de forma organizada.
 * Prática na **formatação de valores monetários**, garantindo duas casas decimais com `.ToString("F2")` e usando `CultureInfo.InvariantCulture` para manter o ponto como separador.
 * Manipulação de **tipos diferentes (`int` e `double`)**, entendendo como a multiplicação entre quantidade e preço gera um valor final do tipo `double`.
+
+---
+
+## ✅ Exercício 06: Intervalos
+
+### Enunciado:
+
+![Enunciado do Exercício](./assets/Exercicio06_Intervalos.png)
+
+---
+
+<details>
+<summary>Ver código</summary>
+
+```csharp
+using System.Globalization;
+
+namespace Intervals {
+    class Program {
+        static void Main(string[] args) {
+
+            double numero = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
+
+            if (numero < 0.0 || numero > 100.0) {
+                Console.WriteLine("Fora de intervalo");
+            }
+            else if (numero <= 25.0) {
+                Console.WriteLine("Intervalo [0,25]");
+            }
+            else if (numero <= 50.0) {
+                Console.WriteLine("Intervalo (25,50]");
+            }
+            else if (numero <= 75.0) {
+                Console.WriteLine("Intervalo (50,75]");
+            }
+            else {
+                Console.WriteLine("Intervalo (75,100]");
+            }
+        }
+    }
+}
+
+```
+
+### Saída no terminal:
+
+![Resultado no Terminal](./assets/Terminal_Exercicio06_Intervalos.png)
+
+</details>
+
+---
+
+### 🧠 Aprendizado:
+
+* **Tradução Lógico-Matemática:** Compreensão prática da diferença entre intervalos fechados `[ ]` (inclusivos, usando `<=`) e intervalos abertos `( )` (exclusivos, usando `<`).
+* **Eficiência do Encadeamento:** Uso inteligente da estrutura `else if` para simplificar a lógica. Ao verificar os limites gradativamente, o programa descarta a necessidade de usar o operador `&&` repetidas vezes.
+* **Operador Lógico OU (`||`):** Aplicação do operador `||` para validar rapidamente se o número de entrada está completamente fora do escopo aceitável (menor que zero ou maior que cem) logo na primeira verificação.
 
 ---
