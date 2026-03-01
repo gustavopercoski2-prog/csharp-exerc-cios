@@ -7,7 +7,7 @@
 Diretório reservado para a resolução de 3 exercícios de lógica usando a estrutura de repetição `while`, do curso **[C# COMPLETO Programação Orientada a Objetos + Projetos](https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/)**, ministrado pelo professor **Nelio Alves** na plataforma **Udemy**.
 
 📌 **Foco:** Estruturas de repetição com quantidade indeterminada de passos.  
-📊 **Progresso:** 🚧 2/3 concluídos.
+📊 **Progresso:** 🚧 3/3 concluídos.
 
 ---
 
@@ -26,6 +26,7 @@ Diretório reservado para a resolução de 3 exercícios de lógica usando a est
 | ------ | ------------ | ---------------------------------------------------------- |
 | **01** | Senha Válida | Repetição com `while` até validar corretamente a entrada   |
 | **02** | Coordenadas  | Uso de múltiplas condições (`&&`) e decisões com `if/else` |
+| **03** | Posto de Combustível | Menu interativo com contadores para registrar escolhas |
 
 ---
 
@@ -107,5 +108,53 @@ namespace Coordinates {
 
 ### 🖥️ Saída no Terminal:
 ![Resultado no Terminal](./assets/Terminal_Exercicio02_Coordenadas.png)
+
+</details>
+
+---
+
+<details>
+<summary><strong>Exercício 03: Posto de Combustível</strong></summary>
+
+### 📷 Enunciado:
+![Enunciado do Exercício](./assets/Exercicio03_PostoDeCombustivel.png)
+
+### 💻 Código:
+```csharp
+namespace GasStation {
+    class Program {
+        static void Main(string[] args) {
+
+            int alcool = 0;
+            int gasolina = 0;
+            int diesel = 0;
+
+            int tipo = int.Parse(Console.ReadLine()!);
+
+            while (tipo != 4) {
+                if (tipo == 1) {
+                    alcool++;
+                }
+                else if (tipo == 2) {
+                    gasolina++;
+                }
+                else if (tipo == 3) {
+                    diesel++;
+                }
+
+                tipo = int.Parse(Console.ReadLine()!);
+            }
+
+            Console.WriteLine("MUITO OBRIGADO");
+            Console.WriteLine("Alcool: " + alcool);
+            Console.WriteLine("Gasolina: " + gasolina);
+            Console.WriteLine("Diesel: " + diesel);
+        }
+    }
+}
+```
+
+### 🖥️ Saída no Terminal:
+![Resultado no Terminal](./assets/Terminal_Exercicio03_PostoDeCombustivel.png)
 
 </details>
